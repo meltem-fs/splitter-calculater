@@ -12,74 +12,71 @@
       href="./images/favicon-32x32.png"
     />
 
-    <link rel="stylesheet" href="style.css" />
-    <title>Frontend Mentor | Tip calculator app</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <title>Anka Code Team | Tip calculator app</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <h1>SPLI <br />TTER</h1>
-    <div class="container">
-      <main>
-        <div class="main-left">
-          <label for=""> Bill</label> <br />
-          <div class="number-in">
-            <img src="./images/icon-dollar.svg" alt="" />
-            <input type="number" id="number-input" />
-          </div>
+    <header class="header__title">
+      <h2>SPLI <br />TTER</h2>
+    </header>
 
-          <div class="select-tip">
-            <label for="">Select Tip %</label> <br />
-            <div class="button">
-              <button>5%</button>
-              <button>10%</button>
-              <button>15%</button>
-              <button>25%</button>
-              <button>50%</button>
-              <button>CUSTOM</button>
+    <section class="calculator-container">
+      <div class="inputs-section">
+        <label for="bill" class="inputs-section__bill-label">Bill</label>
+        <input
+          class="inputs-section__bill-input"
+          id="bill"
+          type="number"
+          value="0"
+        />
 
-              <!-- <button> <input type="number" name="" id="" placeholder="CUSTOM"> </button> -->
-            </div>
-          </div>
-          <div class="number-of-people">
-            <!-- <label for="">Number of People</label><br> -->
-            <div class="par">
-              <p>Number of People</p>
-              <p class="zero">Can't Be Zero</p>
-            </div>
+        <fieldset class="btns">
+          <legend class="btns__legend">Select Tip %</legend>
+          <button class="btns__button btns__button--selected">5%</button>
+          <button class="btns__button">10%</button>
+          <button class="btns__button">15%</button>
+          <button class="btns__button">25%</button>
+          <button class="btns__button">50%</button>
+          <input class="btns__custom" type="number" placeholder="Custom" />
+        </fieldset>
 
-            <div class="input-person">
-              <img src="./images/icon-person.svg" alt="" />
-              <input type="number" name="" id="" />
-            </div>
-          </div>
-        </div>
-        <div class="main-right">
+        <label for="people" class="inputs-selection__people-label"
+          >Number of people <span id="alert"></span
+        ></label>
+        <input
+          class="inputs-selection__people-input"
+          type="number"
+          id="people"
+          value="5"
+        />
+      </div>
+
+      <div class="result-section">
+        <div class="results">
           <div>
-          <div class="amount">
-            <div>Tip Amount <br> <span>/ person</span> </div>
-            <div>$0.00</div>
+            <p class="results__tip-amount">Tip Amount</p>
+            <p class="results__tip-person">/ person</p>
           </div>
 
-          <div class="amount">
-            <div>Total <br> <span>/ person</span></div>
-            <div>$0.00</div>
+          <p class="results__tip-value">0</p>
+
+          <div>
+            <p class="results__total-amount">Total</p>
+            <p class="results__total-person">/ person</p>
           </div>
+
+          <p class="results_total-value">0</p>
         </div>
-          <div class="reset-button">
-            <button>RESET</button>
-          </div>
-        </div>
-      </main>
+
+        <button class="result-section__reset">Reset</button>
+      </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://github.com/Ice-MMan" target="_blank">Github</a>. Coded by
+      <a href="https://github.com/Ice-MMan">Ice-MMan</a>.
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
